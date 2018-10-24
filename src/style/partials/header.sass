@@ -1,0 +1,126 @@
+.header
+	&__top
+		padding: 45px 0 25px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-family: 'Circe-Bold', Arial, Helvetica, sans-serif
+	&__menu
+		.item
+			font-weight: bold
+			color: $white
+			text-decoration: none
+			padding: 10px
+			letter-spacing: 0.7px
+			transition: color .3s
+			&:hover
+				color: transparentize($white, .2)
+			&:first-of-type
+				margin-right: 40px
+			&--menu
+				margin-left: 200px
+				letter-spacing: 1.4px
+			&--lang
+				margin-left: 100px
+				letter-spacing: 1.4px
+	.fico-arrow
+		font-size: 7px
+	.fico-menu
+		font-size: 10px
+	&__bottom
+		display: flex
+		.social
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			margin: auto
+			font-family: 'Circe-Regular', Arial, Helvetica, sans-serif
+			&__item
+				text-decoration: none
+				display: inline-block
+				transform: rotate(90deg)
+				color: $white
+				&:not(:last-of-type)
+					margin-bottom: 45px
+		.slider
+			width: calc(100% - 60px)
+			&__item
+				background-size: cover
+				height: 100vh
+				display: flex
+				justify-content: space-around
+				align-items: center
+				position: relative
+				outline: none
+				&--1
+					background: url(../img/slide1.jpg) no-repeat center top
+				&--2
+					background: url(../img/slide2.jpg) no-repeat center top
+				&--3
+					background: url(../img/slide3.jpg) no-repeat center top
+		.title
+			position: relative
+			padding-left: 105px
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				top: 77px
+				z-index: -1
+				+sprite($line)
+			span
+				font-size: 24px
+				font-weight: 600
+				line-height: 3.42
+			h1
+				font-family: 'Circe-ExtraBold', Arial, Helvetica, sans-serif
+				font-weight: 800
+				line-height: 1.25
+				text-transform: uppercase
+				font-size: 48px
+				max-width: 100%
+				width: 500px
+		.count
+			font-size: 48px
+			font-weight: bold
+			letter-spacing: 2.4px
+			.small
+				margin-left: 15px
+				vertical-align: top
+				font-size: 16px
+				letter-spacing: 2.5px
+	&__project
+		z-index: 2
+		position: fixed
+		padding: 20px 250px 20px 120px
+		bottom: 0
+		right: 0
+		background: $white
+		.list
+			display: inline-flex
+			justify-content: space-between
+			color: $warm-grey
+			align-items: center
+			&__item
+				max-width: 180px
+				margin-right: 150px
+				font-family: 'ProximaNova-Regular', Arial, Helvetica, sans-serif
+				&:first-of-type
+					font-size: 14px
+					letter-spacing: 0.7px
+					color: $black-two
+				&:last-of-type
+					background: $orange-red
+					height: 50px
+					width: 50px
+					border-radius: 50%
+					position: relative
+					.fico-arrowdown
+						color: $white
+						font-size: 18px
+						position: absolute
+						top: 50%
+						right: 50%
+						transform: translate(50%, -50%)
